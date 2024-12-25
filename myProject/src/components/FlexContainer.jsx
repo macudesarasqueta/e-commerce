@@ -1,0 +1,13 @@
+import React from 'react'
+
+export default function FlexContainer(props) {
+    const styleFlex = {
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: "row",
+        gap: "15px"
+    }
+    return (
+        <div style = {styleFlex}>{props.children}</div>
+    )
+}
