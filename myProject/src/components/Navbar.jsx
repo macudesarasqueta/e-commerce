@@ -7,14 +7,21 @@
 //App -> NavBar -> Cart Widget
 //App -> ItemListContainer ("greeting")
 
-// export default function Navbar ( {
-    <nav>
-        <h2>Logo</h2>
-        <CartWidget/> Carrito
-        <li>
-            <a href="">Inicio</a>
-            <a href="">Mates</a>
-            <a href="">Bombillas</a>
-            <a href="">Yerberas</a>
-        </li>
-    </nav>
+import React from 'react';
+import CartWidget from './CartWidget';
+
+
+export default function Navbar () {
+    return (
+        <nav>
+            <img src="../../public/images/Untitled design.png" width={30} alt="logo" />
+            <li style = {{display: 'inline-block'}}>
+                <a href="">&nbsp;Inicio </a>
+                <a href="">Mates </a>
+                <a href="">Bombillas </a>
+                <a href="">Yerberas</a>
+            </li>
+            <CartWidget/> Carrito
+        </nav>
+    );
+};

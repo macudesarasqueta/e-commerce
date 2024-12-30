@@ -1,8 +1,10 @@
 import "./App.css";
 // import Button from "./components/Button";
 import CardProduct from "./components/CardProduct";
+import CartWidget from "./components/CartWidget";
 import FlexContainer from "./components/FlexContainer";
 import ItemCount from "./components/ItemCount";
+import Navbar from "./components/Navbar";
 
 
 export default function App() {
@@ -10,6 +12,7 @@ export default function App() {
     <>
     {/* <Navbar/>
     <ItemListContainer/> */}
+    <Navbar/>
       <section>
         <FlexContainer>
 
