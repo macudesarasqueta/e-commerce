@@ -14,14 +14,14 @@ import CartWidget from './CartWidget';
 export default function Navbar () {
     return (
         <nav>
-            <img src="../../public/images/Untitled design.png" width={30} alt="logo" />
+            <img src="/images/Untitled design.png" width={30} alt="logo" />
             <li style = {{display: 'inline-block'}}>
                 <a href="">&nbsp;Inicio </a>
                 <a href="">Mates </a>
                 <a href="">Bombillas </a>
                 <a href="">Yerberas</a>
             </li>
-            <CartWidget/> Carrito
+            <CartWidget/> Carrito 3
         </nav>
     );
 };

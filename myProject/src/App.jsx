@@ -1,18 +1,17 @@
 import "./App.css";
 // import Button from "./components/Button";
 import CardProduct from "./components/CardProduct";
-import CartWidget from "./components/CartWidget";
 import FlexContainer from "./components/FlexContainer";
 import ItemCount from "./components/ItemCount";
+import ItemListContainer from "./components/ItemListContainer";
 import Navbar from "./components/Navbar";
 
 
 export default function App() {
   return (
     <>
-    {/* <Navbar/>
-    <ItemListContainer/> */}
     <Navbar/>
+    <ItemListContainer/>
       <section>
         <FlexContainer>
 
@@ -45,14 +44,3 @@ export default function App() {
     </>
   );
 }
-
-{/* <nav>
-  <h2>Logo</h2>
-  <CartWidget/> Carrito
-  <li>
-    <a href="">Inicio</a>
-    <a href="">Mates</a>
-    <a href="">Bombillas</a>
-    <a href="">Yerberas</a>
-  </li>
-</nav> */}
