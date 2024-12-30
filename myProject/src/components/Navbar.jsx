@@ -6,3 +6,15 @@
 
 //App -> NavBar -> Cart Widget
 //App -> ItemListContainer ("greeting")
+
+// export default function Navbar ( {
+    <nav>
+        <h2>Logo</h2>
+        <CartWidget/> Carrito
+        <li>
+            <a href="">Inicio</a>
+            <a href="">Mates</a>
+            <a href="">Bombillas</a>
+            <a href="">Yerberas</a>
+        </li>
+    </nav>
