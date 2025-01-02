@@ -1,7 +1,5 @@
 import Button from "./Button";
-// import "./button.css";
 import "./cardproduct.css";
-
 
 export default function CardProduct(props) {
   const {price, title, text, img, stock} = props;

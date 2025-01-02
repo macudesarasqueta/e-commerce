@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function FlexContainer(props) {
     const styleFlex = {
         display: "flex",
