@@ -7,8 +7,10 @@ export default function App() {
   
   return (
     <>
-    <Navbar/>
-    <ItemListContainer greeting = "Bienvenidos a mi sitio web"/>
+    <div>
+      <Navbar/>
+      <ItemListContainer greeting = "Bienvenidos a mi sitio web"/>
+    </div>
       <section>
         <ItemCount/>
       </section>
