@@ -7,5 +7,5 @@ export default function FlexContainer(props) {
     }
     return (
         <div style = {styleFlex}>{props.children}</div>
-    )
-}
+    );
+};

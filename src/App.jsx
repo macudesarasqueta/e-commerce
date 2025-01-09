@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
+import ItemCount from "./components/ItemCount";
 
 export default function App() {
   
@@ -12,13 +13,17 @@ export default function App() {
     <Routes>
       <Route 
       path="/"
-      element={<ItemListContainer greeting="My App"/>}
+      element={<ItemListContainer greeting="Amate.allover"/>}
       />
       <Route 
+      path="/category/:catid" 
+      element={<ItemListContainer greeting="Compras por categoría"/>}/>
+      <Route 
       path="/item/:id"
-      element={<ItemListContainer />}
+      element={<ItemListContainer greeting="Item"/>}
       />
     </Routes>
+    <ItemCount/>
     <footer className="footer">
         <p className="parrafo-footer">&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
         {/* <div className="redes-sociales">

@@ -30,10 +30,9 @@ body {
   min-height: 100vh;
 }
 
-/* h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-} */
+a.active {
+  color: rgb(243, 122, 142);
+}
 
 .footer {
   text-align: center; /* Centra el contenido dentro del footer */

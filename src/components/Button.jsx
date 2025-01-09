@@ -15,7 +15,6 @@ export default function Button(props) {
         } }
         style = {{backgroundColor : colorState}} 
         disabled = {isDisabled} 
-        //className = {`btn-${color}`}
         >
         {children}
         </button>

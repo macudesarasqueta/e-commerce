@@ -31,5 +31,3 @@ export default function ItemListContainer (props) {
         </div>
     );
 };
-
-//add ItemDetailContainer (github profe)

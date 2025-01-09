@@ -1,8 +1,8 @@
 export default function CartWidget () {
     return (
-        <div className="text-black">
+        <div>
             🛒
-            <span className="cart-count">3</span>
+            <span className=" text-black">3</span>
         </div>    
     );
 };

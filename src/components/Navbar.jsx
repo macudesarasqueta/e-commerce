@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import React, { useState, useRef, useEffect } from 'react';
+import "./navbar.css";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,21 +20,25 @@ export default function Navbar() {
         document.removeEventListener('mousedown', handleClickOutside);
       };
     }, []);
+
+    const handleLinkClick = () => {
+      setIsOpen(false);
+    };
   
     return (
-      <nav className="relative bg-white p-4 shadow-md">
+      <nav className="relative bg-white p-6">
         <div className="flex justify-between items-center">
         <NavLink to="/">
-          <img src="images/Untitled design.png" className= "flex items-center" width={40} height={40} alt="logo"/>
+          <img src="images/icon.png" className= "flex items-center" width={40} height={40} alt="logo"/>
         </NavLink>
           {/* Botón de hamburguesa - visible solo en móviles */}
           <div className="sm:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={setIsOpen}
               className="text-black focus:outline-none focus:ring-2 focus:ring-gray-200"
             >
-              <span className="sr-only">Abrir menú</span>
               <div className="space-y-1">
+                <span className="block w-8 h-1 bg-black"></span>
                 <span className="block w-8 h-1 bg-black"></span>
                 <span className="block w-8 h-1 bg-black"></span>
                 <span className="block w-8 h-1 bg-black"></span>
@@ -43,25 +48,27 @@ export default function Navbar() {
   
           {/* Menú de navegación - visible solo en pantallas más grandes */}
           <ul className="hidden sm:flex space-x-4">
-            <li><NavLink to="/" className="text-black hover:text-gray-700">Inicio</NavLink></li>
-            <li><NavLink to="/mates" className="text-black hover:text-gray-700">Mates</NavLink></li>
-            <li><NavLink to="/bombillas" className="text-black hover:text-gray-700">Bombillas</NavLink></li>
-            <li><NavLink to="/yerberas" className="text-black hover:text-gray-700">Yerberas</NavLink></li>
+            <li><NavLink to="/" className="text-black">Inicio</NavLink></li>
+            <li><NavLink to="/item" className="text-black">Detalle</NavLink></li>
+            <li><NavLink to="/mates" className="text-black">Mates</NavLink></li>
+            <li><NavLink to="/bombillas" className="text-black">Bombillas</NavLink></li>
+            <li><NavLink to="/yerberas" className="text-black">Yerberas</NavLink></li>
           </ul>
           <CartWidget/>
         </div>
   
         {/* Fondo negro y menú hamburguesa - visible solo en móviles */}
         {isOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-75 z-40 flex items-center justify-center sm:hidden">
+          <div className="hamburguer-menu">
             <ul
               ref={menuRef}
               className="bg-white p-6 rounded-lg space-y-4"
             >
-              <li><NavLink to="/" className="text-black hover:text-gray-700">Inicio</NavLink></li>
-              <li><NavLink to="/mates" className="text-black hover:text-gray-700">Mates</NavLink></li>
-              <li><NavLink to="/bombillas" className="text-black hover:text-gray-700">Bombillas</NavLink></li>
-              <li><NavLink to="/yerberas" className="text-black hover:text-gray-700">Yerberas</NavLink></li>
+              <li><NavLink to="/" className="text-black" onClick={handleLinkClick}>Inicio</NavLink></li>
+              <li><NavLink to="/item" className="text-black" onClick={handleLinkClick}>Detalle</NavLink></li>
+              <li><NavLink to="/mates" className="text-black" onClick={handleLinkClick}>Mates</NavLink></li>
+              <li><NavLink to="/bombillas" className="text-black" onClick={handleLinkClick}>Bombillas</NavLink></li>
+              <li><NavLink to="/yerberas" className="text-black" onClick={handleLinkClick}>Yerberas</NavLink></li>
             </ul>
           </div>
         )}
