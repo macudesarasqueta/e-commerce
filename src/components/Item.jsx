@@ -1,8 +1,10 @@
 import Button from "./Button";
 import "./cardproduct.css";
+import { Link } from "react-router-dom";
+
 
 export default function Item(props) {
-  const {price, title, text, img, stock} = props;
+  const {price, title, text, img, stock, id} = props;
 
   return (
     <div className="card">
@@ -13,8 +15,10 @@ export default function Item(props) {
         <div>
           <p className="card-price">$ {price}</p>
         </div>
-        <Button>Agregar al carrito</Button>
+        <Link to={`/item/${id}`}>
         <p className="card-stock">Stock : {stock}</p>
+        <Button>Ver detalle</Button>
+        </Link>
       </div>
     </div>
   );

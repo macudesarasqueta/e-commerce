@@ -1,4 +1,4 @@
-import Item from "./CardProduct"
+import Item from "./Item"
 
 export default function ItemList (props) {
     return (

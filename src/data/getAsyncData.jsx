@@ -33,3 +33,22 @@ export function getAsyncItemById(requestID) {
 
   return promiseData;
 }
+
+
+export function getAsyncItemsByCategory(catID) {
+  console.log("Solitando productos para... ", catID)
+  
+  const promiseData = new Promise( (resolve, reject) => {    
+
+    setTimeout( () => {    
+      if (errorFatal) reject("Algo salió mal!!!!")  
+      const requestedProduct = products.filter( (item) => item.category.toLowerCase() === catID.toLowerCase())
+      // TODO: validar si encontramos un producto -> si no es así, rechazamos la promesa
+      resolve(requestedProduct)
+    }, 500)     
+  })
+
+  console.log("Promesa generada.")
+
+  return promiseData;
+}

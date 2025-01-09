@@ -1,5 +1,8 @@
 export default function CartWidget () {
     return (
-        <h5 className="text-black">🛒 3</h5>
+        <div className="text-black">
+            🛒
+            <span className="cart-count">3</span>
+        </div>    
     );
 };

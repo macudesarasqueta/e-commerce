@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -22,8 +23,9 @@ export default function Navbar() {
     return (
       <nav className="relative bg-white p-4 shadow-md">
         <div className="flex justify-between items-center">
-          <img src="images/Untitled design.png" className= "flex items-center" width={40} height={40} alt="logo" />
-  
+        <NavLink to="/">
+          <img src="images/Untitled design.png" className= "flex items-center" width={40} height={40} alt="logo"/>
+        </NavLink>
           {/* Botón de hamburguesa - visible solo en móviles */}
           <div className="sm:hidden">
             <button
@@ -41,10 +43,10 @@ export default function Navbar() {
   
           {/* Menú de navegación - visible solo en pantallas más grandes */}
           <ul className="hidden sm:flex space-x-4">
-            <li><a href="#" className="text-black hover:text-gray-700">Inicio</a></li>
-            <li><a href="#" className="text-black hover:text-gray-700">Mates</a></li>
-            <li><a href="#" className="text-black hover:text-gray-700">Bombillas</a></li>
-            <li><a href="#" className="text-black hover:text-gray-700">Yerberas</a></li>
+            <li><NavLink to="/" className="text-black hover:text-gray-700">Inicio</NavLink></li>
+            <li><NavLink to="/mates" className="text-black hover:text-gray-700">Mates</NavLink></li>
+            <li><NavLink to="/bombillas" className="text-black hover:text-gray-700">Bombillas</NavLink></li>
+            <li><NavLink to="/yerberas" className="text-black hover:text-gray-700">Yerberas</NavLink></li>
           </ul>
           <CartWidget/>
         </div>
@@ -56,10 +58,10 @@ export default function Navbar() {
               ref={menuRef}
               className="bg-white p-6 rounded-lg space-y-4"
             >
-              <li><a href="#" className="text-black hover:text-gray-700">Inicio</a></li>
-              <li><a href="#" className="text-black hover:text-gray-700">Mates</a></li>
-              <li><a href="#" className="text-black hover:text-gray-700">Bombillas</a></li>
-              <li><a href="#" className="text-black hover:text-gray-700">Yerberas</a></li>
+              <li><NavLink to="/" className="text-black hover:text-gray-700">Inicio</NavLink></li>
+              <li><NavLink to="/mates" className="text-black hover:text-gray-700">Mates</NavLink></li>
+              <li><NavLink to="/bombillas" className="text-black hover:text-gray-700">Bombillas</NavLink></li>
+              <li><NavLink to="/yerberas" className="text-black hover:text-gray-700">Yerberas</NavLink></li>
             </ul>
           </div>
         )}
