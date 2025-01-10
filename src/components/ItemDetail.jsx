@@ -1,7 +1,11 @@
-import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
 export default function ItemDetail(props) {
-  const { price, title, description, text, img } = props;
+  const { price, title, description, text, img, stock } = props;
+
+  function onSubmitCount(count) {
+    console.log(`Agregaste ${count} al carrito`);
+  }
 
   return (
     <div className="">
@@ -13,11 +17,9 @@ export default function ItemDetail(props) {
           <p className="">$ {price}</p>
         </div>
         <p>{description}</p>
-        <button>Agregar al carrito</button>
       </div>
       <div>
-        <p>Productos similares</p>
-        <Link to="/item/10">Producto 10</Link>
+        <ItemCount onSubmitCount={onSubmitCount} max={stock}/>
       </div>
     </div>
   );

@@ -2,14 +2,14 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
-import ItemCount from "./components/ItemCount";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 export default function App() {
   
   return (
-    <BrowserRouter future={{ v7_relativeSplatPath: true }}>
+    <BrowserRouter 
+    future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
     <Navbar/>
-
     <Routes>
       <Route 
       path="/"
@@ -20,10 +20,10 @@ export default function App() {
       element={<ItemListContainer greeting="Compras por categoría"/>}/>
       <Route 
       path="/item/:id"
-      element={<ItemListContainer greeting="Item"/>}
+      element={<ItemDetailContainer/>}
       />
     </Routes>
-    <ItemCount/>
+
     <footer className="footer">
         <p className="parrafo-footer">&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
         {/* <div className="redes-sociales">

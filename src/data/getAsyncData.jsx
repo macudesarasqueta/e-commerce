@@ -9,7 +9,7 @@ export default function getAsyncData() {
       if (errorFatal) reject("Algo salió mal!!!!")
       console.log("Promesa Terminada")
       resolve(products)
-    }, 2000)     
+    }, 1000)     
   })
 
   console.log("Promesa generada.")
@@ -26,7 +26,7 @@ export function getAsyncItemById(requestID) {
       if (errorFatal) reject("Algo salió mal!!!!")
       console.log("Promesa Terminada")
       resolve(products.find(item => item.id === requestID))      
-    }, 2000)     
+    }, 1000)     
   })
 
   console.log("Promesa generada.")
@@ -45,7 +45,7 @@ export function getAsyncItemsByCategory(catID) {
       const requestedProduct = products.filter( (item) => item.category.toLowerCase() === catID.toLowerCase())
       // TODO: validar si encontramos un producto -> si no es así, rechazamos la promesa
       resolve(requestedProduct)
-    }, 500)     
+    }, 1000)     
   })
 
   console.log("Promesa generada.")

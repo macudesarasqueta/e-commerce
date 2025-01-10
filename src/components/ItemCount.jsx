@@ -1,14 +1,16 @@
 import { useState } from "react"
 
-export default function ItemCount() {
+export default function ItemCount(props) {
 
     const [count, setCount] = useState(1);
 
     const handleAdd = () => {
-        if (count < 10)
-            setCount(count + 1);
-        else
+        if (count === props.max) {
             alert('No hay mas stock');
+            return ;
+        }
+        else
+            setCount(count + 1);
     }
 
     const handleSubstract = () => {
@@ -18,11 +20,21 @@ export default function ItemCount() {
             alert('Error');
     }
 
+    function hadleClick () {
+        props.onSubmitCount(count);
+    }
+
     return (
         <div>
-            <button onClick = {handleSubstract}>-</button>
-            <span>{count}</span>
-            <button onClick = {handleAdd}>+</button>
+            <div>
+                <button onClick = {handleSubstract}>-</button>
+                <span>{count}</span>
+                <button onClick = {handleAdd}>+</button>
+            </div>
+            <div>
+                <button onClick={hadleClick}>Agregar al carrito</button>
+            </div>
+            
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import Button from "./Button";
+import ItemCount from "./ItemCount";
 import "./cardproduct.css";
 import { Link } from "react-router-dom";
 
@@ -14,11 +15,16 @@ export default function Item(props) {
         <p className="card-text">{text}</p>
         <div>
           <p className="card-price">$ {price}</p>
+          <p className="card-stock">Stock : {stock}</p>
         </div>
         <Link to={`/item/${id}`}>
-        <p className="card-stock">Stock : {stock}</p>
-        <Button>Ver detalle</Button>
+          <Button>Ver detalle</Button>
         </Link>
+        <div>
+          <br />
+          <ItemCount/>
+          {/* <Button>Agregar al carrito</Button> */}
+        </div>
       </div>
     </div>
   );
