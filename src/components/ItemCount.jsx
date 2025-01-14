@@ -5,22 +5,22 @@ export default function ItemCount(props) {
     const [count, setCount] = useState(1);
 
     const handleAdd = () => {
-        if (count === props.max) {
+        if (count < props.stock)
+            setCount(count + 1);
+        else {
             alert('No hay mas stock');
             return ;
         }
-        else
-            setCount(count + 1);
     }
 
     const handleSubstract = () => {
-        if (count > 0)
+        if (count > 1)
             setCount(count - 1);
         else
             alert('Error');
     }
 
-    function hadleClick () {
+    function handleClick () {
         props.onSubmitCount(count);
     }
 
@@ -32,7 +32,7 @@ export default function ItemCount(props) {
                 <button onClick = {handleAdd}>+</button>
             </div>
             <div>
-                <button onClick={hadleClick}>Agregar al carrito</button>
+                <button onClick={handleClick}>Agregar {count} producto/s al carrito</button>
             </div>
             
         </div>

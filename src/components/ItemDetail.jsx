@@ -1,11 +1,14 @@
 import ItemCount from "./ItemCount";
 
 export default function ItemDetail(props) {
-  const { price, title, description, text, img, stock } = props;
+  const { price, title, text, img, stock } = props;
 
   function onSubmitCount(count) {
-    console.log(`Agregaste ${count} al carrito`);
+    console.log(`Agregaste ${count} unidad/es al carrito`);
   }
+
+  if (!title || !price || !img)
+    return <p>Loading...</p>
 
   return (
     <div className="">
@@ -15,8 +18,9 @@ export default function ItemDetail(props) {
         <p className="">{text}</p>
         <div>
           <p className="">$ {price}</p>
+          <p className="card-stock">Stock : {stock}</p>
         </div>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
       </div>
       <div>
         <ItemCount onSubmitCount={onSubmitCount} max={stock}/>

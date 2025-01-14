@@ -1,11 +1,10 @@
 import Button from "./Button";
-import ItemCount from "./ItemCount";
 import "./cardproduct.css";
 import { Link } from "react-router-dom";
 
 
 export default function Item(props) {
-  const {price, title, text, img, stock, id} = props;
+  const {id, price, title, text, img, stock} = props;
 
   return (
     <div className="card">
@@ -20,11 +19,6 @@ export default function Item(props) {
         <Link to={`/item/${id}`}>
           <Button>Ver detalle</Button>
         </Link>
-        <div>
-          <br />
-          <ItemCount/>
-          {/* <Button>Agregar al carrito</Button> */}
-        </div>
       </div>
     </div>
   );
