@@ -4,9 +4,10 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
 export default function ItemDetailContainer() {
-  const [product, setProduct] = useState({});
-
+  // console.log("Entro a ItemDetailContainer");
+  const [product, setProduct] = useState(null);
   const { id } = useParams();
+  // console.log(`Me devuelve el ID ${id}`);
 
   useEffect(() => {
     async function getProduct() {

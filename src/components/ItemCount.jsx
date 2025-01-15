@@ -5,10 +5,10 @@ export default function ItemCount(props) {
     const [count, setCount] = useState(1);
 
     const handleAdd = () => {
-        if (count < props.stock)
+        if (count !== props.max)
             setCount(count + 1);
         else {
-            alert('No hay mas stock');
+            alert('No puedes agregar mas unidades de este producto al carrito');
             return ;
         }
     }
@@ -17,7 +17,7 @@ export default function ItemCount(props) {
         if (count > 1)
             setCount(count - 1);
         else
-            alert('Error');
+            alert('No quieres agregar ningun producto?');
     }
 
     function handleClick () {
