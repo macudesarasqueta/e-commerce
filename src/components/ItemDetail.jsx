@@ -1,3 +1,4 @@
+import products from "../data/data";
 import ItemCount from "./ItemCount";
 
 export default function ItemDetail(props) {
@@ -9,12 +10,9 @@ export default function ItemDetail(props) {
     console.log(`Stock: ${stock}`);
   }
 
-  // if (!title)
-  //   console.log("Loading1...")
-  // else if (!price)
-  //   console.log("Loading2...")
-  // else if (!img)
-  //   console.log("Loading3...")
+  if (!title)
+    return <h1>ERROR 404</h1>
+
   return (
     <div>
       <img src={img} width="150" height="150" alt="product img" />
