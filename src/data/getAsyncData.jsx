@@ -43,6 +43,6 @@ export function getAsyncItemsByCategory(catID) {
         resolve(requestedProduct)
         console.log("Promesa terminada getAsyncItemsByCategory");
     }, 1000);
-    console.log("Promesa generada getAsyncItemsByCategory")
+    console.log("Promesa generada getAsyncItemsByCategory");
   })
 }
