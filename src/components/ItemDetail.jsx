@@ -1,12 +1,16 @@
 import ItemCount from "./ItemCount";
+import { useContext } from "react";
+import cartContext from "../context/cartContext";
 
 export default function ItemDetail(props) {
   // console.log("Entro al ItemDetail");
-  const { price, title, text, img, stock } = props;
+  const { price, title, text, img, stock, id } = props;
+  const { addItem } = useContext(cartContext);
 
   function onSubmitCount(count) {
     console.log(`Agregaste ${count} unidad/es al carrito`);
     console.log(`Stock: ${stock}`);
+    addItem({id, price, title, count, img});
   }
 
   // if (!title)

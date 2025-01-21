@@ -3,31 +3,28 @@
 @tailwind utilities;
 
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   background-color: black;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
   font-synthesis: none;
-  -moz-osx-font-smoothing: grayscale;
+  /* -moz-osx-font-smoothing: grayscale; */
 }
 
-section {
+/* section {
   padding: 0.1rem 0.25rem 2rem;
   border-bottom: solid 2px rgb(149, 149, 149);
-}
+} */
 
 body {
   margin: 0;
   background-color: black;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* place-items: center; */
+  /* min-width: 320px; */
 }
 
 a.active {

@@ -1,5 +1,6 @@
 import FlexContainer from "./FlexContainer"
 import Item from "./Item"
+import "./cardproduct.css"
 
 export default function ItemList (props) {
     return (

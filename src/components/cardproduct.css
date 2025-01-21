@@ -1,14 +1,20 @@
 .card {
-    margin: 2rem;
-    padding: 2em;
+    padding: 10px 10px 5px;
+    margin-left: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 300px; /* Establece un ancho fijo */
+    max-width: 100%; /* Asegura que no se extienda más allá de su contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
-  
+
 .card-body {
     padding: 16px;
+    flex-grow: 1; /* Permite que el contenido ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
 }
 
 .card-title {
@@ -21,6 +27,13 @@
     margin-bottom: 12px;
     color: #dad3d3;
 }
+
+/* .card-title, .card-text {
+    text-align: center; Opcional: centra el texto 
+    white-space: nowrap; Evita que el texto se desborde a nuevas líneas 
+    overflow: hidden; Oculta el texto que no cabe 
+    text-overflow: ellipsis; Muestra puntos suspensivos si el texto es muy largo 
+} */
   
 .card-price, .card-stock {
     font-size: 1rem;

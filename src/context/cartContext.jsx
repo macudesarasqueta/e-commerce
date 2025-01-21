@@ -3,7 +3,10 @@ import { createContext, useState } from "react";
 const cartContext = createContext({ cartItems: [] });
 
 export function CartContextProvider(props) {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([
+    { id: 0, item: 1, count: 20 },
+    { id: 10, item: 2, count: 4 },
+  ]);
 
   function removeItem(id) {
     const newCartState = cartItems.filter((item) => item.id !== id);
@@ -24,11 +27,6 @@ export function CartContextProvider(props) {
 
     setCartItems( [...cartItems, { id, title, img, count, price}]);
   }
-
-  // * 1. Agregar un item al carrito // addItem()
-  // 2. Eliminar todos los items del carrito -> clear
-  // * 3. removeItem(itemId, quantity) // Remover un item del cart por usando su id
-  // * 4. Contar los items del carrito // countItemsInCart()
 
   function countItemsInCart() {
     let total = 0;
