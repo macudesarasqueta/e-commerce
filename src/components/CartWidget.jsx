@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import cartContext from "../context/cartContext";
+
 export default function CartWidget () {
+    const context = useContext(cartContext);
     return (
-        <div>
+        <div className="cart-icon">
             🛒
-            <span className=" text-black">3</span>
+            <span className="cart-count text-black">{context.countItemsInCart()}</span>
         </div>    
     );
 };

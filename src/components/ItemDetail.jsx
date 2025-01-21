@@ -1,4 +1,3 @@
-import products from "../data/data";
 import ItemCount from "./ItemCount";
 
 export default function ItemDetail(props) {
@@ -10,8 +9,8 @@ export default function ItemDetail(props) {
     console.log(`Stock: ${stock}`);
   }
 
-  if (!title)
-    return <h1>ERROR 404</h1>
+  // if (!title)
+  //   return <h1>ERROR 404</h1>
 
   return (
     <div>
