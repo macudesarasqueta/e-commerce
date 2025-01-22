@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getAsyncItemById } from "../data/getAsyncData";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import Loader from "./Loader";
 
 export default function ItemDetailContainer() {
   // console.log("Entro a ItemDetailContainer");
@@ -17,5 +18,8 @@ export default function ItemDetailContainer() {
     getProduct();
   }, [id]);
 
-  return <ItemDetail {...product} />;
+  if (product)
+    return <ItemDetail {...product} />;
+  else
+    return <Loader/>
 }
