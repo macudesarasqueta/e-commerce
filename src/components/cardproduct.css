@@ -34,7 +34,11 @@
     overflow: hidden; Oculta el texto que no cabe 
     text-overflow: ellipsis; Muestra puntos suspensivos si el texto es muy largo 
 } */
-  
+
+.card_accent {
+    border: solid 3px #8c3636;
+  }
+
 .card-price, .card-stock {
     font-size: 1rem;
     font-weight: bold;

@@ -6,7 +6,8 @@ const products = [
         "text": "Mate artesanal hecho de algarrobo con diseño rústico.",
         "img": "https://example.com/mate_madera.jpg",
         "category": 'mates',
-        "stock": 5
+        "stock": 5,
+        "discount": 50
     },
     {
         "id": 2,
@@ -33,7 +34,8 @@ const products = [
         "text": "Mate de vidrio templado con funda de silicona antideslizante.",
         "img": "https://example.com/mate_vidrio.jpg",
         "category": 'mates',
-        "stock": 10
+        "stock": 10,
+        "freeDelivery": true,
     },
     {
         "id": 5,
@@ -42,7 +44,8 @@ const products = [
         "text": "Mate térmico de acero inoxidable, ideal para mantener la temperatura.",
         "img": "https://example.com/mate_acero.jpg",
         "category": 'mates',
-        "stock": 2
+        "stock": 2,
+        "discount": 20
     },
     {
         "id": 6,
@@ -60,7 +63,8 @@ const products = [
         "text": "Mate hecho con materiales reciclados y diseño sostenible.",
         "img": "https://example.com/mate_ecologico.jpg",
         "category": 'bombillas',
-        "stock": 8
+        "stock": 8,
+        "freeDelivery": true,
     }
 ]
 

@@ -4,8 +4,11 @@ import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { CartContextProvider } from "./context/cartContext";
+import CartContainer from "./components/CartContainer";
+import { useState } from "react";
 
 export default function App() {
+  const [estado, setEstado] = useState(true);
   
   return (
     <CartContextProvider>
@@ -23,6 +26,10 @@ export default function App() {
         <Route 
         path="/item/:id"
         element={<ItemDetailContainer/>}
+        />
+        <Route 
+        path="/cart"
+        element={<CartContainer/>}
         />
       </Routes>
 

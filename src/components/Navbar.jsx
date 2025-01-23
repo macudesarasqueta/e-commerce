@@ -35,10 +35,8 @@ export default function Navbar() {
           <div className="sm:hidden">
             <button
               onClick={setIsOpen}
-              className="text-black focus:outline-none focus:ring-2 focus:ring-gray-200"
             >
               <div className="space-y-1">
-                <span className="block w-8 h-1 bg-black"></span>
                 <span className="block w-8 h-1 bg-black"></span>
                 <span className="block w-8 h-1 bg-black"></span>
                 <span className="block w-8 h-1 bg-black"></span>
@@ -53,6 +51,7 @@ export default function Navbar() {
             <li><NavLink to="/mates" className="text-black">Mates</NavLink></li>
             <li><NavLink to="/bombillas" className="text-black">Bombillas</NavLink></li>
             <li><NavLink to="/yerberas" className="text-black">Yerberas</NavLink></li>
+            <li><NavLink to="/cart" className="text-black">Carrito</NavLink></li>
           </ul>
           <CartWidget/>
         </div>
@@ -69,6 +68,8 @@ export default function Navbar() {
               <li><NavLink to="/mates" className="text-black" onClick={handleLinkClick}>Mates</NavLink></li>
               <li><NavLink to="/bombillas" className="text-black" onClick={handleLinkClick}>Bombillas</NavLink></li>
               <li><NavLink to="/yerberas" className="text-black" onClick={handleLinkClick}>Yerberas</NavLink></li>
+              <li><NavLink to="/cart" className="text-black">Carrito</NavLink></li>
+
             </ul>
           </div>
         )}

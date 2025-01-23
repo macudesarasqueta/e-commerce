@@ -47,4 +47,4 @@ export function CartContextProvider(props) {
   );
 }
 
-export default cartContext();
+export default cartContext;

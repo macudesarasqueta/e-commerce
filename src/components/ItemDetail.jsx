@@ -15,9 +15,6 @@ export default function ItemDetail(props) {
     setisAddedToCart(true);
   }
 
-  // if (!title)
-  //   return <h1>ERROR 404</h1>
-
   return (
     <div>
       <img src={img} width="150" height="150" alt="product img" />
