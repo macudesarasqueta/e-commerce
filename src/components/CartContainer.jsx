@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import cartContext from "../context/cartContext";
+import { NavLink } from "react-router-dom";
 
 function CartContainer() {
   const { cartItems, removeItem } = useContext(cartContext);
@@ -20,9 +21,12 @@ function CartContainer() {
               <h3>{item.title}</h3>
               <p>Precio: ${item.price}</p>
               <p>Unidades: {item.count}</p>
+              <NavLink to="/">
+                <button>Seguir comprando</button>
+              </NavLink>
               <button onClick={() => removeItem(item.id)}>Eliminar</button>
             </div>
-            {/* <hr /> */}
+            <hr />
           </>
         ))}
     </div>

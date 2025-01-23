@@ -45,7 +45,7 @@ export default function Navbar() {
           </div>
   
           {/* Menú de navegación - visible solo en pantallas más grandes */}
-          <ul className="hidden sm:flex space-x-4">
+          <ul className="hidden sm:flex space-x-8">
             <li><NavLink to="/" className="text-black">Inicio</NavLink></li>
             <li><NavLink to="/item" className="text-black">Detalle</NavLink></li>
             <li><NavLink to="/mates" className="text-black">Mates</NavLink></li>
@@ -61,14 +61,14 @@ export default function Navbar() {
           <div className="hamburguer-menu">
             <ul
               ref={menuRef}
-              className="bg-white p-6 rounded-lg space-y-4"
+              className="p-4 space-y-2"
             >
               <li><NavLink to="/" className="text-black" onClick={handleLinkClick}>Inicio</NavLink></li>
               <li><NavLink to="/item" className="text-black" onClick={handleLinkClick}>Detalle</NavLink></li>
               <li><NavLink to="/mates" className="text-black" onClick={handleLinkClick}>Mates</NavLink></li>
               <li><NavLink to="/bombillas" className="text-black" onClick={handleLinkClick}>Bombillas</NavLink></li>
               <li><NavLink to="/yerberas" className="text-black" onClick={handleLinkClick}>Yerberas</NavLink></li>
-              <li><NavLink to="/cart" className="text-black">Carrito</NavLink></li>
+              <li><NavLink to="/cart" className="text-black" onClick={handleLinkClick}>Carrito</NavLink></li>
 
             </ul>
           </div>
