@@ -2,6 +2,7 @@ import ItemCount from "./ItemCount";
 import { useContext, useState } from "react";
 import cartContext from "../context/cartContext";
 import { NavLink } from "react-router-dom";
+import products from "../data/data";
 
 export default function ItemDetail(props) {
   // console.log("Entro al ItemDetail");
@@ -37,10 +38,9 @@ export default function ItemDetail(props) {
           <button>Seguir comprando</button>
         </NavLink>
       </div>
-      ) 
-      : (
+      ) : (
         <ItemCount onSubmitCount={onSubmitCount} max={stock} /> 
-      )
+        )
       }
     </div>
   )
