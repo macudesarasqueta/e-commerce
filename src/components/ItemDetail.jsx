@@ -28,14 +28,21 @@ export default function ItemDetail(props) {
           <p>Stock : {stock}</p>
         </div>
       </div>
+      {isAddedToCart ? (
       <div>
-      {isAddedToCart 
-        ? <NavLink to="/cart">
-            <button>Ver Carrito</button>
-          </NavLink>
-        : <ItemCount onSubmitCount={onSubmitCount} max={stock}/>
-      }
+        <NavLink to="/cart">
+          <button>Ver Carrito</button>
+        </NavLink>
+        <NavLink to="/">
+          <button>Seguir comprando</button>
+        </NavLink>
       </div>
+      ) 
+      : (
+        <ItemCount onSubmitCount={onSubmitCount} max={stock} /> 
+      )
+      }
     </div>
-  );
+  )
 }
+

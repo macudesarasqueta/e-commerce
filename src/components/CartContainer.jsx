@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import cartContext from "../context/cartContext";
 import { createBuyOrder } from "../data/database";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 function CartContainer() {
   const [userData, setUserData] = useState({
