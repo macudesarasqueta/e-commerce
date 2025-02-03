@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export default function ItemCount(props) {
 
@@ -17,7 +17,7 @@ export default function ItemCount(props) {
         if (count > 1)
             setCount(count - 1);
         else
-            alert('No quieres agregar ningun producto?');
+            alert('Ve a carrito par eliminar tu producto');
     }
 
     function handleClick () {
@@ -33,8 +33,7 @@ export default function ItemCount(props) {
             </div>
             <div>
                 <button onClick={handleClick}>Agregar {count} producto/s al carrito</button>
-            </div>
-            
+            </div>  
         </div>
     );
 };

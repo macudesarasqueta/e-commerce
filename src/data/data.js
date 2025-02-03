@@ -25,7 +25,8 @@ const products = [
         "text": "Mate tradicional de calabaza curada con virola metálica.",
         "img": "images/calabaza.png",
         "category": 'mates',
-        "stock": 4
+        "stock": 4,
+        "freeDelivery": true,
     },
     {
         "id": 4,
@@ -54,17 +55,35 @@ const products = [
         "text": "Mate lujoso con revestimiento de cuero y detalles de alpaca.",
         "img": "images/imperial.png",
         "category": 'mates',
-        "stock": 5
+        "stock": 5,
+        "freeDelivery": true,
     },
     {
         "id": 7,
         "price": 10,
         "title": "Bombilla de acero",
-        "text": "Mate hecho con materiales reciclados y diseño sostenible.",
+        "text": "Bombilla resistente y duradera de acero inoxidable, ideal para disfrutar del mate con estilo. Su diseño sencillo y elegante hace que sea perfecta para cualquier tipo de mate.",
         "img": "images/bombilla.png",
         "category": 'bombillas',
         "stock": 8,
-        "freeDelivery": true,
+    },
+    {
+        "id": 8,
+        "price": 8,
+        "title": "Bombilla pico de loro",
+        "text": "Bombilla con un diseño clásico de pico de loro, ideal para un sorbo cómodo y fluido. Hecha de acero inoxidable, es perfecta para quienes disfrutan de un mate tradicional con un toque único.",
+        "img": "images/bombilla.png",
+        "category": 'bombillas',
+        "stock": 8,
+    },
+    {
+        "id": 9,
+        "price": 18,
+        "title": "Bombilla",
+        "text": "Bombilla con un diseño clásico de pico de loro, ideal para un sorbo cómodo y fluido. Hecha de acero inoxidable, es perfecta para quienes disfrutan de un mate tradicional con un toque único.",
+        "img": "images/bombilla.png",
+        "category": 'bombillas',
+        "stock": 8,
     }
 ]
 

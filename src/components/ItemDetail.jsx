@@ -13,6 +13,7 @@ export default function ItemDetail(props) {
     console.log(`Agregaste ${count} unidad/es al carrito`);
     console.log(`Stock: ${stock}`);
     addItem({id, price, title, count, img});
+    console.log("Imagen cargada", img);
     setisAddedToCart(true);
   }
 
@@ -26,7 +27,6 @@ export default function ItemDetail(props) {
           <p>$ {price}</p>
           <p>Stock : {stock}</p>
         </div>
-        {/* <p>{description}</p> */}
       </div>
       <div>
       {isAddedToCart 

@@ -19,7 +19,7 @@ export default function ItemDetailContainer() {
   }, [id]);
 
   if (product)
-    return <ItemDetail {...product} />;
+    return <ItemDetail {...product} id={id} />;
   else
     return <Loader/>
 }

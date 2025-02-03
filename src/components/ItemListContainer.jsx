@@ -13,15 +13,15 @@ export default function ItemListContainer (props) {
             const respuestaPromise = getAsyncData();
             console.log(respuestaPromise);
             respuestaPromise
-            .then((respuesta) => setProducts(respuesta))
-            .catch((error) => alert(error));
+                .then((respuesta) => setProducts(respuesta))
+                .catch((error) => alert(error));
         }
         else {
             const respuestaPromise = getAsyncItemsByCategory(catid);
             console.log(respuestaPromise);
             respuestaPromise
-            .then((respuesta) => setProducts(respuesta))
-            .catch((error) => alert(error));
+                .then((respuesta) => setProducts(respuesta))
+                .catch((error) => alert(error));
         }
     }, [catid]);
 

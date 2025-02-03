@@ -5,6 +5,8 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { CartContextProvider } from "./context/cartContext";
 import CartContainer from "./components/CartContainer";
+//import { exportProductsWithBatch } from "./data/database";
+//import { createDocument } from "./data/database";
 
 export default function App() {
   
@@ -13,6 +15,9 @@ export default function App() {
       <BrowserRouter 
       future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
       <Navbar/>
+      {/* Botones para crear un nuevo documento y exportarlas a la base de datos de Firebase
+      <button onClick={createDocument}>Crear documento</button>
+      <button onClick={exportProductsWithBatch}>Exportar base de datos</button> */}
       <Routes>
         <Route 
         path="/"
