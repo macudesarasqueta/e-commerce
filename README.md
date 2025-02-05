@@ -25,6 +25,11 @@ cd amate-allover
 3️⃣ Instala las dependencias:
 npm install
 
+4️⃣ Inicia la aplicación:
+npm run dev
+
+🔗 La aplicación estará disponible en http://localhost:5173/ (o el puerto que indique Vite).
+
 📌 Funcionalidades
 ✅ Listado de productos organizados por categoría.
 ✅ Vista detallada de cada producto.
@@ -37,3 +42,5 @@ Si tienes preguntas o sugerencias, no dudes en contactarme:
 
 📧 Email: macu.desarasqueta@gmail.com
 🐙 GitHub: https://github.com/macudesarasqueta
+
+✨ ¡Gracias por visitar mi proyecto!
