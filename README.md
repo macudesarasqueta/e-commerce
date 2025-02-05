@@ -40,7 +40,7 @@ npm run dev
 📞 Contacto  
 Si tienes preguntas o sugerencias, no dudes en contactarme:
 
-📧 Email: macu.desarasqueta@gmail.com
+📧 Email: macu.desarasqueta@gmail.com  
 🐙 GitHub: https://github.com/macudesarasqueta
 
 ✨ ¡Gracias por visitar mi proyecto!
