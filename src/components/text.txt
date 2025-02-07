@@ -1,3 +1,7 @@
+A mejorar:
+
 1. Imagenes en ItemDetail
-2. Navbar cuando no estoy en inicio (anchi de la pag)
-3. Mates, bombillas y yerberas
+2. Navbar cuando no estoy en inicio (ancho de la pag)
+3. Eliminar el carrito luego de crear la orden
+4. Controlar stock
+5. Si el producto ya esta en el carrito, sumar solo la cantidad, en vez de agregar todo el producto de nuevo
