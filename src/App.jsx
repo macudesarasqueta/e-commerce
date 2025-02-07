@@ -19,11 +19,11 @@ export default function App() {
       <Routes>
         <Route 
         path="/"
-        element={<ItemListContainer greeting="Amate.allover"/>}
+        element={<ItemListContainer greeting="🧉 Amate.allover 🧉"/>}
         />
         <Route 
         path="/category/:catid" 
-        element={<ItemListContainer greeting="Compras por categoría"/>}/>
+        element={<ItemListContainer greeting="Compras por categoría "/>}/>
         <Route 
         path="/item/:id"
         element={<ItemDetailContainer/>}

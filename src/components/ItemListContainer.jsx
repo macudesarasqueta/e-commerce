@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import getAsyncData, { getAsyncItemsByCategory } from "../data/database";
+import "./../App.css"
 
 export default function ItemListContainer (props) {
     
@@ -27,7 +28,8 @@ export default function ItemListContainer (props) {
 
     return (
         <div>
-            <ItemList greeting = {props.greeting} products = {products}/>
+            <h1 className="greeting">{props.greeting}</h1>
+            <ItemList products = {products}/>
         </div>
     );
 };
