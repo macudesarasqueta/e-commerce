@@ -43,7 +43,7 @@ export default function FormCheckout() {
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Nombre</label>
-        <input 
+        <input style={{color: "black"}}
           name="username"  
           type="text" 
           value={userData.username}
@@ -52,7 +52,7 @@ export default function FormCheckout() {
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Apellido</label>
-        <input 
+        <input style={{color: "black"}}
           name="surname" 
           type="text" 
           value={userData.surname}
@@ -61,7 +61,7 @@ export default function FormCheckout() {
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Email</label>
-        <input 
+        <input style={{color: "black"}}
           name="email" 
           type="text" 
           value={userData.email}
@@ -70,7 +70,7 @@ export default function FormCheckout() {
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Teléfono</label>
-        <input 
+        <input style={{color: "black"}}
           name="phonenumber" 
           type="text" 
           value={userData.phonenumber}
