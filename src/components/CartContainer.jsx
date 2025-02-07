@@ -5,7 +5,7 @@ import FormCheckout from "./FormCheckout";
 import "../App.css";
 
 
-function CartContainer() {
+export default function CartContainer() {
   const { cartItems, removeItem } = useContext(cartContext);
 
   if (!cartItems || cartItems.length === 0)
@@ -30,5 +30,3 @@ function CartContainer() {
     </div>
   );
 }
-
-export default CartContainer;

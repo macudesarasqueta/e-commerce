@@ -96,7 +96,7 @@ export async function getAsyncItemsByCategory(catID) {
 //   console.log("Commit de products completo", commitRes)
 //}
 export async function createBuyOrder(orderData){
-  console.log(orderData);
+  // console.log(orderData);
   const newOrderDoc = 
     await addDoc(collection(db, "orders"), orderData); 
   return newOrderDoc.id

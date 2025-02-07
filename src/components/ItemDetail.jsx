@@ -11,10 +11,10 @@ export default function ItemDetail(props) {
   const { addItem } = useContext(cartContext);
 
   function onSubmitCount(count) {
-    console.log(`Agregaste ${count} unidad/es al carrito`);
-    console.log(`Stock: ${stock}`);
+    // console.log(`Agregaste ${count} unidad/es al carrito`);
+    // console.log(`Stock: ${stock}`);
     addItem({id, price, title, count, img});
-    console.log("Imagen cargada", img);
+    // console.log("Imagen cargada", img);
     setisAddedToCart(true);
   }
 

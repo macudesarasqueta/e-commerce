@@ -1,10 +1,10 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import "../App.css";
 import cartContext from "../context/cartContext";
 import { createBuyOrder } from "../data/database";
 
 export default function FormCheckout() {
-  const { cartItems, getTotalPrice } = useContext(cartContext);
+  let { cartItems, getTotalPrice, setCartItems } = useContext(cartContext);
 
   const [userData, setUserData] = useState({
     username: "",
@@ -25,11 +25,11 @@ export default function FormCheckout() {
       total: totalPrice,
       date: new Date(),
     };
-    console.log(totalPrice)
+    // console.log(totalPrice)
 
     const newOrderID = await createBuyOrder(orderData);
     setOrderId(newOrderID);
-    console.log("ID", newOrderID);
+    //setCartItems([])
   }
 
   function onInputChange(evt) {
@@ -43,8 +43,11 @@ export default function FormCheckout() {
   if (orderId) {
     return (
       <div style={{ textAlign: "center", marginTop: "20px", color: "white" }}>
-        <h2>Gracias por su compra 🎉</h2>
+        <h2 className="greeting">Gracias por su compra 🎉</h2>
+        <p>Monto total pagado : €{totalPrice}</p>
         <p>Su ID de compra es: <strong>{orderId}</strong></p>
+        <br />
+        <p>Hasta la proxima!! 👋🏼</p>
       </div>
     );
   }

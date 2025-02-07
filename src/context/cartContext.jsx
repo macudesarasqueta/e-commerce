@@ -38,6 +38,7 @@ export function CartContextProvider(props) {
         addItem,
         removeItem,
         getTotalPrice,
+        setCartItems
       }}
     >
       {props.children}
