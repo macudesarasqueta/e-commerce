@@ -22,7 +22,7 @@ function CartContainer() {
               <NavLink to="/">
                 <button>Seguir comprando</button>
               </NavLink>
-              <button onClick={() => removeItem(item.id)}>Eliminar</button>
+              <button style={{background:"red"}}onClick={() => removeItem(item.id)}>Eliminar</button>
             <hr />
           </div>
         ))}

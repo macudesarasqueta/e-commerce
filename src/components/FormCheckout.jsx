@@ -13,19 +13,23 @@ export default function FormCheckout() {
     phonenumber: "",
   });
 
+  const [orderId, setOrderId] = useState(null);
+  const totalPrice = getTotalPrice();
+
   async function handleCheckout(evt) {
     evt.preventDefault();
 
     const orderData = {
       buyer: { ...userData},
       items: cartItems,
-      total: getTotalPrice(),
+      total: totalPrice,
       date: new Date(),
     };
+    console.log(totalPrice)
 
     const newOrderID = await createBuyOrder(orderData);
-    // Cambiar console.log por monstrar en pantalla (state + rendering condicional)
-    console.log("Compra realizada", newOrderID);
+    setOrderId(newOrderID);
+    console.log("ID", newOrderID);
   }
 
   function onInputChange(evt) {
@@ -36,9 +40,17 @@ export default function FormCheckout() {
     }));
   }
 
-  // DRY
+  if (orderId) {
+    return (
+      <div style={{ textAlign: "center", marginTop: "20px", color: "white" }}>
+        <h2>Gracias por su compra 🎉</h2>
+        <p>Su ID de compra es: <strong>{orderId}</strong></p>
+      </div>
+    );
+  }
   return (
     <form>
+      <h2 className="title" style={{color: "pink"}}>Precio total de compra: €{totalPrice}</h2>
       <h2 className="title">Completa con tus datos para completar la compra 🧉</h2>
 
       <div style={{ display: "flex", marginBottom: 8 }}>
@@ -77,7 +89,7 @@ export default function FormCheckout() {
           onChange={onInputChange} />
       </div>
 
-      <button
+      <button style={{background:"green"}}
         disabled={
           !(
             userData.username !== "" &&
