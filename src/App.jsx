@@ -5,8 +5,6 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { CartContextProvider } from "./context/cartContext";
 import CartContainer from "./components/CartContainer";
-//import { exportProductsWithBatch } from "./data/database";
-//import { createDocument } from "./data/database";
 
 export default function App() {
   

@@ -17,7 +17,7 @@ export default function Item(props) {
             style={{ backgroundColor: discount ? "green" : "inherit" }}
             className="card-price"
           >
-            $ {price}
+            € {price}
             {discount && (
             <span style={{ display: "block", marginTop: "5px", fontSize: "0.9em", color: "white" }}>
               Producto en oferta!

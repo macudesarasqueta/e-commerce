@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, setDoc, query, where, getDoc, addDoc, writeBatch} from "firebase/firestore";
-import products from "./data";
+import { getFirestore, collection, getDocs, doc, query, where, getDoc, addDoc} from "firebase/firestore";
+// import products from "./data";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBb3kj0p_rtv9fHirwSzKRoJCmHv6tulsk",
@@ -101,11 +101,11 @@ export async function createBuyOrder(orderData){
     await addDoc(collection(db, "orders"), orderData); 
   return newOrderDoc.id
 }
-export async function createBuyOrderWithStockUpdate(){
+//export async function createBuyOrderWithStockUpdate(){
     // Crear orden de compra
     // update del stock (
         // busquemos cada doc -> orderData.items
         // cada documento update(doc, { stock: })
-}
-export async function updateStock(){
-}
+//}
+// export async function updateStock(){
+// }

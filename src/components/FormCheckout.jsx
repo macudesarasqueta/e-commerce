@@ -1,31 +1,49 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import "../App.css";
+import cartContext from "../context/cartContext";
+import { createBuyOrder } from "../data/database";
 
-export default function Form() {
-  function onSubmit() {
-    console.log(`Gracias por tu compra ${name}`);
-  }
+export default function FormCheckout() {
+  const { cartItems, getTotalPrice } = useContext(cartContext);
 
   const [userData, setUserData] = useState({
     username: "",
     surname: "",
-    age: "",
+    email: "",
+    phonenumber: "",
   });
 
+  async function handleCheckout(evt) {
+    evt.preventDefault();
+
+    const orderData = {
+      buyer: { ...userData},
+        // username: userData.username,
+        // surname: userData.surname,
+        // email: userData.email,
+        // phonenumber: userData.phonenumber
+      items: cartItems,
+      total: getTotalPrice(),
+      date: new Date(),
+    };
+
+    const newOrderID = await createBuyOrder(orderData);
+    // Cambiar console.log por monstrar en pantalla (state + rendering condicional)
+    console.log("Compra realizada", newOrderID);
+  }
+
   function onInputChange(evt) {
-    //1. Que input modificamos
     const inputName = evt.target.name;
-    // 2. Copiar el state
-    const newUserData = { ...userData };
-    // 3. modifico el nuevo objecot
-    newUserData[inputName] = evt.target.value;
-    // 4. update del state
-    setUserData(newUserData);
+    setUserData((prevUserData) => ({
+      ...prevUserData,
+      [inputName]: evt.target.value,
+    }));
   }
 
   // DRY
   return (
     <form>
-      <h2>Completa tus datos para completar la compra🛍</h2>
+      <h2 className="title">Completa con tus datos para completar la compra 🧉</h2>
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Nombre</label>
@@ -38,8 +56,13 @@ export default function Form() {
       </div>
 
       <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Edad</label>
-        <input name="age" type="text" onChange={onInputChange} />
+        <label style={{ width: "100px", marginRight: 4 }}>Email</label>
+        <input name="email" type="text" onChange={onInputChange} />
+      </div>
+
+      <div style={{ display: "flex", marginBottom: 8 }}>
+        <label style={{ width: "100px", marginRight: 4 }}>Teléfono</label>
+        <input name="phonenumber" type="number" onChange={onInputChange} />
       </div>
 
       <button
@@ -47,10 +70,11 @@ export default function Form() {
           !(
             userData.username !== "" &&
             userData.surname !== "" &&
-            userData.age !== ""
+            userData.email !== "" &&
+            userData.phonenumber !== ""
           )
         }
-        onClick={(evt) => onSubmit(evt)}
+        onClick={handleCheckout}
       >
         Crear orden
       </button>
