@@ -18,10 +18,6 @@ export default function FormCheckout() {
 
     const orderData = {
       buyer: { ...userData},
-        // username: userData.username,
-        // surname: userData.surname,
-        // email: userData.email,
-        // phonenumber: userData.phonenumber
       items: cartItems,
       total: getTotalPrice(),
       date: new Date(),
@@ -47,22 +43,38 @@ export default function FormCheckout() {
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Nombre</label>
-        <input name="username" type="text" onChange={onInputChange} />
+        <input 
+          name="username"  
+          type="text" 
+          value={userData.username}
+          onChange={onInputChange} />
       </div>
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Apellido</label>
-        <input name="surname" type="text" onChange={onInputChange} />
+        <input 
+          name="surname" 
+          type="text" 
+          value={userData.surname}
+          onChange={onInputChange} />
       </div>
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Email</label>
-        <input name="email" type="text" onChange={onInputChange} />
+        <input 
+          name="email" 
+          type="text" 
+          value={userData.email}
+          onChange={onInputChange} />
       </div>
 
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label style={{ width: "100px", marginRight: 4 }}>Teléfono</label>
-        <input name="phonenumber" type="number" onChange={onInputChange} />
+        <input 
+          name="phonenumber" 
+          type="text" 
+          value={userData.phonenumber}
+          onChange={onInputChange} />
       </div>
 
       <button

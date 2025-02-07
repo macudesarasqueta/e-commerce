@@ -47,9 +47,9 @@ export default function Navbar() {
           {/* Menú de navegación - visible solo en pantallas más grandes */}
           <ul className="hidden sm:flex space-x-8">
             <li><NavLink to="/" className="text-black">Inicio</NavLink></li>
-            <li><NavLink to="/mates" className="text-black">Mates</NavLink></li>
-            <li><NavLink to="/bombillas" className="text-black">Bombillas</NavLink></li>
-            <li><NavLink to="/yerberas" className="text-black">Yerberas</NavLink></li>
+            <li><NavLink to="/category/mates" className="text-black">Mates</NavLink></li>
+            <li><NavLink to="/category/bombillas" className="text-black">Bombillas</NavLink></li>
+            <li><NavLink to="/category/yerberas" className="text-black">Yerberas</NavLink></li>
           </ul>
           <CartWidget/>
         </div>
@@ -62,9 +62,9 @@ export default function Navbar() {
               className="p-4 space-y-2"
             >
               <li><NavLink to="/" className="text-black" onClick={handleLinkClick}>Inicio</NavLink></li>
-              <li><NavLink to="/mates" className="text-black" onClick={handleLinkClick}>Mates</NavLink></li>
-              <li><NavLink to="/bombillas" className="text-black" onClick={handleLinkClick}>Bombillas</NavLink></li>
-              <li><NavLink to="/yerberas" className="text-black" onClick={handleLinkClick}>Yerberas</NavLink></li>
+              <li><NavLink to="/category/mates" className="text-black" onClick={handleLinkClick}>Mates</NavLink></li>
+              <li><NavLink to="/category/bombillas" className="text-black" onClick={handleLinkClick}>Bombillas</NavLink></li>
+              <li><NavLink to="/category/yerberas" className="text-black" onClick={handleLinkClick}>Yerberas</NavLink></li>
 
             </ul>
           </div>
